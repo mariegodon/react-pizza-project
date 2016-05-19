@@ -1,0 +1,434 @@
+/* This is a bit better than setting border-box everywhere */
+
+
+html{
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  
+  body{
+      margin: 0;
+  }
+  
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.cheeseToppingPic{
+  
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  
+}
+
+.main-menu {
+    
+    width: 100vw;
+    background: rgba(0,0,0, 0.6);
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    .logo{
+        &:hover{
+            background: transparent;
+        }
+        
+        font-size: 2em;
+        padding: 0 1em;
+        font-weight: 100;
+        
+    }
+    
+    li {
+        padding: 2em;
+        
+        &:hover{
+            background: rgba(0,0,0,0.8);
+        }
+        
+    }
+    
+    a{
+     color: white;
+     text-decoration: none;
+    }
+    
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+.homepage{
+    
+    .nextIcon{
+        height:45px;
+    }
+    
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    
+    background: url(http://travelwithjoshcohen.com/wp-content/uploads/2014/10/italy1.jpg);
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    
+    text-align: center;
+    
+    h1 {
+        width: 50vw;
+        padding: 0.2em 1em;
+        margin: 3em auto 1em auto;
+        font-weight: 100;
+        font-size: 4em;
+        background: rgba(255,255,255, 0.7);
+    }
+    
+    .pizza{
+        font-weight: 300;
+    }
+    
+    a{
+        width: 20vw;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 2em;
+        background: rgba(255,255,255, 0.7);
+        padding: 0.3em;
+        border-radius: 5px;
+        
+        &:hover{
+            background-color: rgba(255,255,255,0.9);
+        }
+    }
+    
+}
+
+.order{
+    
+    text-align: center;
+    
+    .nextIcon{
+        height:45px;
+    }
+    
+    h1 {
+        width: 50vw;
+        margin: 2.5em auto 1em auto;
+        font-weight: 100;
+        font-size: 3.5em;
+    }
+    
+    .pizza{
+        font-weight: 300;
+    }
+    
+    input{
+        font-size: 1em;
+        font-weight: 100;
+        padding: 12px;
+        width: 25vw;
+        margin-bottom: 25px;
+        border: none;
+        border-bottom: 3px solid black;
+        outline: none;
+        
+        &:focus{
+            border-bottom: 3px solid #6099cf;
+        }
+        
+    }
+    
+    button{
+        
+        outline: none;
+        color: white;
+        border: none;
+        min-width: 20vw;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 1.6em;
+        background: rgba(0,0,0, 0.6);
+        padding: 0.3em;
+        border-radius: 5px;
+        
+        &.false:hover{
+            background-color: rgba(96,153,207,0.6);
+        }
+        &.true:hover{
+            cursor: not-allowed;
+        }
+    }
+    
+    .sidePizza{
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    
+}
+
+.choosePizza{
+    text-align: center;
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+    
+    h1 {
+        width: 50vw;
+        margin: 2.5em auto 1em auto;
+        font-weight: 100;
+        font-size: 3.5em;
+    }
+    
+    .pizza{
+        font-weight: 300;
+    }    
+    
+    .pizzaTypeLI{
+        display: flex;
+        justify-content: center;
+        
+        div{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h2{
+            
+            font-weight: 400;
+            font-size: 2em;
+            margin: 12px;
+            
+        }
+        
+        .ingredients{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+            font-size: 1.8em;
+            font-weight: 100;
+            text-align: center;
+            margin: 0;
+            
+            p{
+                margin: 0 4px;                
+            }
+            
+            .with{
+                font-weight: 500;
+                font-size: 0.8em;
+            }
+        }
+        .price{
+            font-size: 1.5em;
+            font-weight: 100;
+        } 
+        
+        img{
+            width: 100px;
+            border-radius: 50%;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    } 
+    .pizzaType{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40vw;
+        margin: 10px auto;
+        border: none;
+        background: rgba(96,153,207,0.4);
+        outline: none;
+        border-radius: 4px;
+        
+        &:hover{
+            background: rgba(96,153,207, 1);
+        }
+        
+    }
+    
+    h3{
+       font-size: 3em;
+       font-weight: 100;
+       margin: 20px;
+        .pizza{
+            font-weight: 300;
+        }
+    }
+    
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .customButton{
+        
+        outline: none;
+        color: white;
+        border: none;
+        min-width: 20vw;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 3.5em;
+        background: rgba(0,0,0, 0.6);
+        padding: 0.3em;
+        border-radius: 5px;
+        
+        span{
+            margin-left: 20px;
+        }
+        
+        .nextIcon{
+            width: 70px;
+            margin: 0 20px;
+        }
+        
+        &:hover{
+            background-color: rgba(96,153,207,0.6);
+        }
+
+    }
+    
+}
+
+.custom{
+    
+    text-align: center;
+    
+    .pizza{
+        font-weight: 300;
+    }
+    .bold{
+        font-weight: 400;
+    }
+    
+    h1{
+        font-weight: 100;
+        margin: 2.5em auto 1em auto;
+        font-size: 3.5em;
+    
+    }
+    
+    h2{
+        color: rgb(96,153,207);
+        font-weight: 200;
+        font-size: 2em;
+    }
+    
+    .cheeseToppingDiv{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .cheeseToppingItem{
+        color: white;
+        font-size: 1.2em;
+        font-weight: 100;
+          display: flex;
+          width: 45vw;
+          justify-content: space-between;
+          align-items: center;
+            text-align: center;
+          padding: 20px 50px;
+          margin: 20px auto;
+          background: rgba(0,0,0, 0.6);
+          border-radius: 5px;
+          
+          input:active{
+              background: rgba(96,153,207,0.6);
+          }
+          
+    }  
+    
+    .price{
+        font-size: 2em;
+        font-weight: 300;
+    }
+    
+    button{
+        
+        
+        outline: none;
+        color: white;
+        border: none;
+        min-width: 15vw;
+        margin: auto;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 2em;
+        background: rgba(0,0,0, 0.6);
+        padding: 0.3em;
+        border-radius: 5px;
+        
+        span{
+            margin-left: 10px;
+        }
+        
+        .nextIcon{
+            width: 50px;
+            margin: 0;
+        }
+        
+        &:hover{
+            background-color: rgba(96,153,207,0.6);
+        }
+        
+        
+    }
+    
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+.cheeseToppingItem p{
+  width: 150px;
+}
+
+

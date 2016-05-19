@@ -1,7 +1,288 @@
 /* This is a bit better than setting border-box everywhere */
 html {
   box-sizing: border-box;
-}
+  font-family: 'Roboto'; }
+  html body {
+    margin: 0; }
+
 *, *::before, *::after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
+
+.cheeseToppingPic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%; }
+
+.main-menu {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 100; }
+  .main-menu .logo {
+    font-size: 2em;
+    padding: 0 1em;
+    font-weight: 100; }
+    .main-menu .logo:hover {
+      background: transparent; }
+  .main-menu li {
+    padding: 2em; }
+    .main-menu li:hover {
+      background: rgba(0, 0, 0, 0.8); }
+  .main-menu a {
+    color: white;
+    text-decoration: none; }
+  .main-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0; }
+    .main-menu ul div {
+      display: flex;
+      justify-content: space-around; }
+
+.homepage {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url(http://travelwithjoshcohen.com/wp-content/uploads/2014/10/italy1.jpg);
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  text-align: center; }
+  .homepage .nextIcon {
+    height: 45px; }
+  .homepage h1 {
+    width: 50vw;
+    padding: 0.2em 1em;
+    margin: 3em auto 1em auto;
+    font-weight: 100;
+    font-size: 4em;
+    background: rgba(255, 255, 255, 0.7); }
+  .homepage .pizza {
+    font-weight: 300; }
+  .homepage a {
+    width: 20vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 2em;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.3em;
+    border-radius: 5px; }
+    .homepage a:hover {
+      background-color: rgba(255, 255, 255, 0.9); }
+
+.order {
+  text-align: center; }
+  .order .nextIcon {
+    height: 45px; }
+  .order h1 {
+    width: 50vw;
+    margin: 2.5em auto 1em auto;
+    font-weight: 100;
+    font-size: 3.5em; }
+  .order .pizza {
+    font-weight: 300; }
+  .order input {
+    font-size: 1em;
+    font-weight: 100;
+    padding: 12px;
+    width: 25vw;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 3px solid black;
+    outline: none; }
+    .order input:focus {
+      border-bottom: 3px solid #6099cf; }
+  .order button {
+    outline: none;
+    color: white;
+    border: none;
+    min-width: 20vw;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 1.6em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.3em;
+    border-radius: 5px; }
+    .order button.false:hover {
+      background-color: rgba(96, 153, 207, 0.6); }
+    .order button.true:hover {
+      cursor: not-allowed; }
+  .order .sidePizza {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+
+.choosePizza {
+  text-align: center; }
+  .choosePizza ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .choosePizza h1 {
+    width: 50vw;
+    margin: 2.5em auto 1em auto;
+    font-weight: 100;
+    font-size: 3.5em; }
+  .choosePizza .pizza {
+    font-weight: 300; }
+  .choosePizza .pizzaTypeLI {
+    display: flex;
+    justify-content: center; }
+    .choosePizza .pizzaTypeLI div {
+      width: 70%;
+      display: flex;
+      flex-direction: column; }
+    .choosePizza .pizzaTypeLI h2 {
+      font-weight: 400;
+      font-size: 2em;
+      margin: 12px; }
+    .choosePizza .pizzaTypeLI .ingredients {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      font-size: 1.8em;
+      font-weight: 100;
+      text-align: center;
+      margin: 0; }
+      .choosePizza .pizzaTypeLI .ingredients p {
+        margin: 0 4px; }
+      .choosePizza .pizzaTypeLI .ingredients .with {
+        font-weight: 500;
+        font-size: 0.8em; }
+    .choosePizza .pizzaTypeLI .price {
+      font-size: 1.5em;
+      font-weight: 100; }
+    .choosePizza .pizzaTypeLI img {
+      width: 100px;
+      border-radius: 50%;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
+  .choosePizza .pizzaType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    margin: 10px auto;
+    border: none;
+    background: rgba(96, 153, 207, 0.4);
+    outline: none;
+    border-radius: 4px; }
+    .choosePizza .pizzaType:hover {
+      background: #6099cf; }
+  .choosePizza h3 {
+    font-size: 3em;
+    font-weight: 100;
+    margin: 20px; }
+    .choosePizza h3 .pizza {
+      font-weight: 300; }
+  .choosePizza div {
+    display: flex;
+    flex-direction: column; }
+  .choosePizza .customButton {
+    outline: none;
+    color: white;
+    border: none;
+    min-width: 20vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 3.5em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.3em;
+    border-radius: 5px; }
+    .choosePizza .customButton span {
+      margin-left: 20px; }
+    .choosePizza .customButton .nextIcon {
+      width: 70px;
+      margin: 0 20px; }
+    .choosePizza .customButton:hover {
+      background-color: rgba(96, 153, 207, 0.6); }
+
+.custom {
+  text-align: center; }
+  .custom .pizza {
+    font-weight: 300; }
+  .custom .bold {
+    font-weight: 400; }
+  .custom h1 {
+    font-weight: 100;
+    margin: 2.5em auto 1em auto;
+    font-size: 3.5em; }
+  .custom h2 {
+    color: #6099cf;
+    font-weight: 200;
+    font-size: 2em; }
+  .custom .cheeseToppingDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .custom .cheeseToppingItem {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 100;
+    display: flex;
+    width: 45vw;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 50px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px; }
+    .custom .cheeseToppingItem input:active {
+      background: rgba(96, 153, 207, 0.6); }
+  .custom .price {
+    font-size: 2em;
+    font-weight: 300; }
+  .custom button {
+    outline: none;
+    color: white;
+    border: none;
+    min-width: 15vw;
+    margin: auto;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.3em;
+    border-radius: 5px; }
+    .custom button span {
+      margin-left: 10px; }
+    .custom button .nextIcon {
+      width: 50px;
+      margin: 0; }
+    .custom button:hover {
+      background-color: rgba(96, 153, 207, 0.6); }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.cheeseToppingItem p {
+  width: 150px; }
+
+/*# sourceMappingURL=app.css.map */

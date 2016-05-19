@@ -1,6 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+import HomePage from '../components/homepage.js';
+import Order from '../components/order.js';
+import Choose from '../components/choose.js';
+import Custom from '../components/custom.js';
+import Done from '../components/done.js';
+import Confirmation from '../components/confirmation.js';
+
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
@@ -14,15 +21,17 @@ var Navigation = React.createClass({
     return (
       <nav className="main-menu">
         <ul>
-          <li>
-            <Link to="/">Home</Link>
+          <li className="logo">
+            PIZZA!
           </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/team">Meet the team</Link>
-          </li>
+          <div>
+            <Link to="/">
+              <li>HOME</li>
+            </Link>
+            <Link to="/order">
+              <li>ORDER</li>
+            </Link>
+          </div>
         </ul>
       </nav>
     );
@@ -36,44 +45,10 @@ var App = React.createClass({
     return (
       <main>
         <Navigation/>
+        <div className="mainSection">
         {this.props.children}
+        </div>
       </main>
-    );
-  }
-});
-
-// home "page"
-var Home = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1>Homepage!</h1>
-        <p>Welcome to the homepage! Try to click on a link in the nav, then click the browser back button.</p>
-      </div>
-    );
-  }
-});
-
-// about "page"
-var About = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1>About Page!</h1>
-        <p>Welcome to the about page!</p>
-      </div>
-    );
-  }
-});
-
-// team "page"
-var Team = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1>Meet the team!</h1>
-        <p>Welcome to the team page!</p>
-      </div>
     );
   }
 });
@@ -103,9 +78,12 @@ by simply nesting `Route` components.
 var routes = (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
-      <Route path="about" component={About}/>
-      <Route path="team" component={Team}/>
+      <IndexRoute component={HomePage}/>
+        <Route path="/order" component={Order} />
+        <Route path="/choose" component={Choose} />
+        <Route path="/custom" component={Custom}/>
+        <Route path="/done" component={Done}/>
+        <Route path="/confirmation" component={Confirmation} />
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>
