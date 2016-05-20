@@ -16,74 +16,74 @@ var cheeses = [{
     name: "mozzarella",
     displayName: "Mozzarella Cheese",
     price: 0,
-    url: "http://www.kidkritics.com/blog/wp-content/uploads/2010/10/cheese_mozzarella.jpg"
+    url: "https://www.diningdash.com/editable/images/menuitems/2690.jpg"
 }, {
     name: "parmesan",
     displayName: "Parmigiano Reggiano",
     price: 5,
-    url: "http://reinaguringaifestival.weebly.com/uploads/1/3/7/9/13795532/9988430_orig.jpg?0"
+    url: "http://lh3.googleusercontent.com/TwDRDBv3j_z79JMpQ_QsJnRAvqrD4mfjAPjymKLOZiAeSSMFOB7y3hPcjVXAF6cuIrKKJtXyfDKSttd-Oj0q=s480-c-e365"
 }, {
     name: "goat",
     displayName: "Goat Cheese",
     price: 5,
-    url: "http://www.lolaskitchenlab.com/wp-content/uploads/DSC_0200.jpg"
+    url: "http://lh6.ggpht.com/nB99tnnTkvySZkb0i_8By_upFCDQGjy5jAdori41ZrOIBbRrDSmcr8geuquprc4u6wh7vRUClVEOKJkP8AOvrQ=s480-c-e365"
 }, {
     name: "blue",
     displayName: "Blue Cheese",
     price: 5,
-    url: "https://notesonaspanishvalley.files.wordpress.com/2014/06/blue-cheese-chopped-17-6-14.jpg"
+    url: "http://lh6.ggpht.com/VH3EC0KJCxBZODBUpprk4k_fLLggDg8rI1SirTwRNi-AkAQ1ElY_wVAMIgIZuwgs_OdaWVFnPSZuSjZ9F-qz3A=s480-c-e365"
 }];
 
 var toppings = [{
     name: "pepperoni",
     displayName: "Pepperoni",
     price: 2,
-    url: "http://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/13/42/81/picEJYzn9.jpg"
+    url: "http://images.bigoven.com/image/upload/t_recipe-256/awesome-pepperoni-pizza-7f8696.jpg"
 }, {
     name: "olives",
     displayName: "Black Olives",
     price: 2,
-    url: "http://www.mundifoods.com/wp-content/uploads/2015/10/236.jpg"
+    url: "http://www.tomandollie.com/image/_standard/0151_Spanish-Style-Pitted-Black-Olives.png"
 }, {
     name: "spinach",
     displayName: "Spinach",
     price: 2,
-    url: "http://www.photos-public-domain.com/wp-content/uploads/2012/03/spinach.jpg"
+    url: "http://earlybirdorganics.co.nz/wp-content/uploads/2014/03/Spinach-organic.jpg"
 }, {
     name: "sundried",
     displayName: "Sundried Tomatoes",
     price: 2,
-    url: "http://cookery-ideas.co.uk/wp-content/uploads/2012/08/sun-dried-tomatoes.jpg"
+    url: "http://www.lamegara.com/243-thickbox_default/marinated-sundried-tomatoes.jpg"
 }, {
     name: "mushrooms",
     displayName: "Mushrooms",
     price: 2,
-    url: "http://johnsonchoi.com/iwineryhk/mushrooms.jpg"
+    url: "http://images.realfoodtoronto.com/D.cache.large/FungiFungi_94650_Mushroom_portobello_shstock_13316641-m.jpg"
 }, {
     name: "peppers",
     displayName: "Mixed Peppers",
     price: 2,
-    url: "https://shailjatomar.files.wordpress.com/2014/04/image.jpg"
+    url: "http://media4.popsugar-assets.com/files/2013/06/17/547/n/1922195/e088c93ae55ecc9f_shutterstock_943762061V76bB.xxxlarge_2x/i/Bell-Peppers.jpg"
 }, {
     name: "chicken",
     displayName: "Chicken",
     price: 5,
-    url: "http://cf.createdby-diane.com/wp-content/uploads/2012/08/3.jpg"
+    url: "http://images.media-allrecipes.com/userphotos/250x250/129378.jpg"
 }, {
     name: "sausage",
     displayName: "Italian Sausage",
     price: 5,
-    url: "http://chefwalter.blog.com/files/2015/05/Hot-Italian-Sausage1.jpg"
+    url: "https://b.zmtcdn.com/data/reviews_photos/b3c/3a338129febaca41fb60ed99f418bb3c_200_thumb.jpg"
 }, {
     name: "shrimp",
     displayName: "Shrimp",
     price: 7,
-    url: "http://static5.businessinsider.com/image/532c68a7ecad0419675b557a/chart-shrimp-hyperinflation.jpg"
+    url: "http://rasamalaysia.com/images/thumbs/shrimp_scampi_thumb.jpg"
 }, {
     name: "bacon",
     displayName: "Bacon",
     price: 5,
-    url: "http://images.medicaldaily.com/sites/medicaldaily.com/files/2015/01/07/crispy-organic-unhealthy-bacon.jpg"
+    url: "http://baconeering.com/wp-content/uploads/2016/02/bacon-heart.jpg"
 }];
 
 function getPrice(selectedToppings, selectedCheese, cheeses, toppings){
@@ -137,7 +137,6 @@ export default class Custom extends React.Component {
     }
     
     handleCheese(cheese){
-        console.log(cheese)
         this.setState({cheese: cheese});
         let price = getPrice(this.state.toppings, cheese, cheeses, toppings)
         this.setState({price: price})

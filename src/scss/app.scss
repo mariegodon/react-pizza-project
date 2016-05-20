@@ -276,6 +276,10 @@ html{
         
         &:hover{
             background: rgba(96,153,207, 1);
+            img{
+                -webkit-filter: none;
+                filter: none;
+        }
         }
         
     }
@@ -361,20 +365,16 @@ html{
     .cheeseToppingItem{
         color: white;
         font-size: 1.2em;
-        font-weight: 100;
-          display: flex;
-          width: 45vw;
-          justify-content: space-between;
-          align-items: center;
-            text-align: center;
-          padding: 20px 50px;
-          margin: 20px auto;
-          background: rgba(0,0,0, 0.6);
-          border-radius: 5px;
-          
-          input:active{
-              background: rgba(96,153,207,0.6);
-          }
+        font-weight: 300;
+        display: flex;
+        width: 45vw;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px 50px;
+        margin: 20px auto;
+        background: rgba(0,0,0, 0.4);
+        border-radius: 5px;
           
     }  
     
@@ -418,6 +418,57 @@ html{
         
     }
     
+}
+
+.order{
+    h1 {
+        width: 50vw;
+        margin: 2.5em auto 1em auto;
+        font-weight: 100;
+        font-size: 3.5em;
+    }
+    
+    h2{
+        color: rgb(96,153,207);
+        font-weight: 200;
+        font-size: 2em;
+    }
+    a{
+        color: rgb(96,153,207);
+    }
+    p{
+        font-size: 1.8em;
+        font-weight: 300;
+    }
+    .confirm{
+            
+        outline: none;
+        color: white;
+        border: none;
+        max-width: 25vw;
+        margin: auto;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 2em;
+        background: rgba(0,0,0, 0.6);
+        padding: 0.3em;
+        border-radius: 5px;
+        
+        
+        .nextIcon{
+            width: 50px;
+            margin: 0;
+        }
+        
+        &:hover{
+            background-color: rgba(96,153,207,0.6);
+        }
+        
+    }
 }
 
 ul {

@@ -186,6 +186,9 @@ html {
     border-radius: 4px; }
     .choosePizza .pizzaType:hover {
       background: #6099cf; }
+      .choosePizza .pizzaType:hover img {
+        -webkit-filter: none;
+        filter: none; }
   .choosePizza h3 {
     font-size: 3em;
     font-weight: 100;
@@ -239,7 +242,7 @@ html {
   .custom .cheeseToppingItem {
     color: white;
     font-size: 1.2em;
-    font-weight: 100;
+    font-weight: 300;
     display: flex;
     width: 45vw;
     justify-content: space-between;
@@ -247,10 +250,8 @@ html {
     text-align: center;
     padding: 20px 50px;
     margin: 20px auto;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 5px; }
-    .custom .cheeseToppingItem input:active {
-      background: rgba(96, 153, 207, 0.6); }
   .custom .price {
     font-size: 2em;
     font-weight: 300; }
@@ -277,6 +278,42 @@ html {
       margin: 0; }
     .custom button:hover {
       background-color: rgba(96, 153, 207, 0.6); }
+
+.order h1 {
+  width: 50vw;
+  margin: 2.5em auto 1em auto;
+  font-weight: 100;
+  font-size: 3.5em; }
+.order h2 {
+  color: #6099cf;
+  font-weight: 200;
+  font-size: 2em; }
+.order a {
+  color: #6099cf; }
+.order p {
+  font-size: 1.8em;
+  font-weight: 300; }
+.order .confirm {
+  outline: none;
+  color: white;
+  border: none;
+  max-width: 25vw;
+  margin: auto;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3em;
+  border-radius: 5px; }
+  .order .confirm .nextIcon {
+    width: 50px;
+    margin: 0; }
+  .order .confirm:hover {
+    background-color: rgba(96, 153, 207, 0.6); }
 
 ul {
   list-style: none;
