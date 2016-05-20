@@ -12,7 +12,7 @@ export default class ToppingList extends React.Component{
     var Checkbox = this.props.cb;
     return(
         
-        <label className="cheeseToppingItem">
+        <label className={this.props.selectedToppings.indexOf(this.props.name) === -1 ? "cheeseToppingItem" : "cheeseToppingItem selected" }>
             <Checkbox value={this.props.name} price={this.props.price} disabled={this.props.disabled} />
             <img src={this.props.url} className="cheeseToppingPic"/>
             <p>{this.props.name}</p>

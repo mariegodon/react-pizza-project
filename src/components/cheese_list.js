@@ -9,7 +9,7 @@ export default class CheeseList extends React.Component{
     var Radio = this.props.radio;
     return(
         
-        <label className="cheeseToppingItem">
+        <label className={this.props.selectedCheese === this.props.name ? "cheeseToppingItem selected" : "cheeseToppingItem"}>
             <Radio value={this.props.name} />
             <img src={this.props.url} className="cheeseToppingPic"/>
             <p>{this.props.name}</p>

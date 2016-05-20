@@ -160,7 +160,7 @@ export default class Custom extends React.Component {
                         {
                             cheeses.map(
                                 cheese => (
-                                    <CheeseList radio={Radio} name={cheese.displayName} url={cheese.url} price={cheese.price} />
+                                    <CheeseList radio={Radio} name={cheese.displayName} url={cheese.url} price={cheese.price} selectedCheese={this.state.cheese}/>
                                 )
                             )
                         }                    
@@ -175,7 +175,7 @@ export default class Custom extends React.Component {
                         {
                             toppings.map(
                                 topping => (
-                                    <ToppingList cb={Checkbox} name={topping.displayName} url={topping.url} price={topping.price} disabled={this.state.toppings.indexOf(topping.displayName) === -1 ? this.state.disabled : false}/>
+                                    <ToppingList cb={Checkbox} name={topping.displayName} url={topping.url} price={topping.price} disabled={this.state.toppings.indexOf(topping.displayName) === -1 ? this.state.disabled : false} selectedToppings={this.state.toppings}/>
                                 )
                             )
                         }
